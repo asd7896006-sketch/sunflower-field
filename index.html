@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>向日葵花田 · Welcome to Taoyuan</title>
+<meta name="description" content="桃園向日葵花田——陽光、微風與盛開的向日葵，一頁充滿大自然元素的響應式網頁。">
+<meta name="theme-color" content="#12301f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='24' fill='%23c8791a'/><g fill='%23f5b301'><ellipse cx='50' cy='16' rx='9' ry='18'/><ellipse cx='50' cy='84' rx='9' ry='18'/><ellipse cx='16' cy='50' rx='18' ry='9'/><ellipse cx='84' cy='50' rx='18' ry='9'/></g></svg>">
+</head>
+<body>
+
+<!-- ========== 導覽列 ========== -->
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#top">
+    <svg class="nav__logo" viewBox="0 0 100 100" aria-hidden="true">
+      <g fill="currentColor" opacity=".9">
+        <ellipse cx="50" cy="16" rx="9" ry="18"/><ellipse cx="50" cy="84" rx="9" ry="18"/>
+        <ellipse cx="16" cy="50" rx="18" ry="9"/><ellipse cx="84" cy="50" rx="18" ry="9"/>
+        <ellipse cx="26" cy="26" rx="9" ry="18" transform="rotate(-45 26 26)"/>
+        <ellipse cx="74" cy="74" rx="9" ry="18" transform="rotate(-45 74 74)"/>
+        <ellipse cx="74" cy="26" rx="9" ry="18" transform="rotate(45 74 26)"/>
+        <ellipse cx="26" cy="74" rx="9" ry="18" transform="rotate(45 26 74)"/>
+      </g>
+      <circle cx="50" cy="50" r="22" fill="#8a5009"/>
+    </svg>
+    <span>桃園・向日葵花田</span>
+  </a>
+  <nav class="nav__links" aria-label="主要導覽">
+    <a href="#hero">首頁</a>
+    <a href="#nature">自然</a>
+    <a href="#gallery">花田</a>
+    <a href="#quote">花語</a>
+    <a href="#footer">關於</a>
+  </nav>
+</header>
+
+<!-- ========== 首屏 ========== -->
+<main id="top">
+<section class="hero" id="hero">
+  <div class="hero__media">
+    <img src="1.png" alt="桃園向日葵花田，藍天白雲下盛開的向日葵" fetchpriority="high">
+    <div class="hero__scrim"></div>
+  </div>
+
+  <!-- 大自然元素：太陽 -->
+  <div class="sun" aria-hidden="true">
+    <span class="sun__rays"></span>
+    <span class="sun__core"></span>
+    <span class="sun__glow"></span>
+  </div>
+
+  <!-- 大自然元素：漂浮的雲 -->
+  <div class="cloud cloud--1" aria-hidden="true"></div>
+  <div class="cloud cloud--2" aria-hidden="true"></div>
+  <div class="cloud cloud--3" aria-hidden="true"></div>
+
+  <!-- 大自然元素：飛鳥 -->
+  <svg class="birds" viewBox="0 0 300 60" aria-hidden="true">
+    <g class="birds__flock">
+      <path class="bird bird--a" d="M0 30 q10 -9 20 0 q10 -9 20 0" />
+      <path class="bird bird--b" d="M46 14 q7 -6 14 0 q7 -6 14 0" />
+      <path class="bird bird--c" d="M34 44 q6 -5 12 0 q6 -5 12 0" />
+    </g>
+  </svg>
+
+  <!-- 大自然元素：飄落的花瓣／花粉粒子 -->
+  <canvas class="pollen" id="pollen" aria-hidden="true"></canvas>
+
+  <div class="hero__content">
+    <p class="hero__eyebrow reveal">Welcome to Taoyuan</p>
+    <h1 class="hero__title reveal" data-delay="80">向日葵<br><em>花田漫遊</em></h1>
+    <p class="hero__lead reveal" data-delay="160">陽光灑落、微風拂過，金黃花盤齊齊朝著日頭綻放。<br>把這片大自然的氣息，收進一個頁面裡。</p>
+    <div class="hero__actions reveal" data-delay="240">
+      <a class="btn btn--solid" href="#nature">走進花田</a>
+      <a class="btn btn--ghost" href="#gallery">看看照片</a>
+    </div>
+  </div>
+
+  <div class="hero__hint" aria-hidden="true">
+    <span>向下捲動</span>
+    <i></i>
+  </div>
+
+  <!-- 大自然元素：草地剪影 -->
+  <svg class="grass" viewBox="0 0 1440 180" preserveAspectRatio="none" aria-hidden="true">
+    <g class="grass__back" fill="#1d4a2b" opacity=".75">
+      <path d="M0 180 V120 q30 -46 56 0 q22 -58 48 -6 q26 -52 52 4 q24 -60 50 -2 q28 -44 54 6 q24 -54 50 2 q26 -48 52 4 q24 -56 50 0 q28 -46 54 6 q24 -52 50 0 q26 -50 52 4 q24 -58 50 -2 q28 -44 54 6 q24 -54 50 2 q26 -48 52 4 q24 -56 50 0 q28 -46 54 6 q24 -52 50 0 q26 -50 52 4 q24 -58 50 -2 q28 -44 54 6 q24 -54 50 2 q26 -48 52 4 q24 -56 50 0 q28 -46 54 6 q24 -52 50 0 q26 -50 52 4 q24 -58 50 -2 q28 -44 54 6 q24 -54 50 2 q26 -48 52 4 q24 -56 50 0 V180 Z"/>
+    </g>
+    <g class="grass__front" fill="#0f2e1c">
+      <path d="M0 180 V140 q26 -52 50 -4 q24 -44 48 6 q26 -56 52 -6 q24 -40 48 10 q26 -54 52 -4 q24 -46 48 6 q26 -56 52 -6 q24 -40 48 10 q26 -54 52 -4 q24 -46 48 6 q26 -56 52 -6 q24 -40 48 10 q26 -54 52 -4 q24 -46 48 6 q26 -56 52 -6 q24 -40 48 10 q26 -54 52 -4 q24 -46 48 6 q26 -56 52 -6 q24 -40 48 10 q26 -54 52 -4 q24 -46 48 6 q26 -56 52 -6 q24 -40 48 10 q26 -54 52 -4 q24 -46 48 6 q26 -56 52 -6 q24 -40 48 10 q26 -54 52 -4 q24 -46 48 6 V180 Z"/>
+    </g>
+  </svg>
+</section>
+
+<!-- ========== 自然元素 ========== -->
+<section class="section nature" id="nature">
+  <div class="wrap">
+    <header class="section__head reveal">
+      <span class="kicker">NATURE ELEMENTS</span>
+      <h2>四種構成花田的自然元素</h2>
+      <p>陽光、微風、露水與土壤——最單純的東西，撐起了一整片金黃。</p>
+    </header>
+
+    <div class="cards">
+      <article class="card reveal" data-delay="0">
+        <div class="card__icon icon--sun">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="12"/>
+            <g class="icon__rays" stroke-linecap="round">
+              <line x1="32" y1="6" x2="32" y2="14"/><line x1="32" y1="50" x2="32" y2="58"/>
+              <line x1="6" y1="32" x2="14" y2="32"/><line x1="50" y1="32" x2="58" y2="32"/>
+              <line x1="13" y1="13" x2="19" y2="19"/><line x1="45" y1="45" x2="51" y2="51"/>
+              <line x1="51" y1="13" x2="45" y2="19"/><line x1="19" y1="45" x2="13" y2="51"/>
+            </g>
+          </svg>
+        </div>
+        <h3>陽光</h3>
+        <p>向日葵的日照時數決定花盤的大小。清晨到中午，它們一路追著光走。</p>
+      </article>
+
+      <article class="card reveal" data-delay="90">
+        <div class="card__icon icon--wind">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <g fill="none" stroke-linecap="round">
+              <path d="M6 24h30a8 8 0 1 0-8-8"/>
+              <path d="M6 36h40a7 7 0 1 1-7 7"/>
+              <path d="M6 48h22a6 6 0 1 0-6-6"/>
+            </g>
+          </svg>
+        </div>
+        <h3>微風</h3>
+        <p>花莖隨風搖曳，彼此授粉。風大的午後，整片田會泛起金色的波浪。</p>
+      </article>
+
+      <article class="card reveal" data-delay="180">
+        <div class="card__icon icon--dew">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M32 8c10 13 16 21 16 29a16 16 0 1 1-32 0c0-8 6-16 16-29z"/>
+            <path class="dew__shine" d="M25 36a8 8 0 0 0 5 8" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>露水</h3>
+        <p>清晨葉面上的水珠，是土壤與雲朵共同寫下的信，日出後便悄悄蒸發。</p>
+      </article>
+
+      <article class="card reveal" data-delay="270">
+        <div class="card__icon icon--soil">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M32 56V30" fill="none" stroke-linecap="round"/>
+            <path d="M32 34c-12 0-18-8-18-18 10 0 18 6 18 18z"/>
+            <path d="M32 40c12 0 18-8 18-18-10 0-18 6-18 18z"/>
+            <path d="M10 56h44" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>土壤</h3>
+        <p>桃園陂塘畔的砂質壤土排水良好，是向日葵根系最喜歡的家。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 花田照片 ========== -->
+<section class="section gallery" id="gallery">
+  <div class="wrap">
+    <header class="section__head reveal">
+      <span class="kicker">THE FIELD</span>
+      <h2>同一片花田，三個角度</h2>
+      <p>仰望、近觀、遠眺——大自然從不重複自己的構圖。</p>
+    </header>
+
+    <div class="shots">
+      <figure class="shot shot--tall reveal">
+        <img src="1.png" alt="仰望向日葵與藍天" loading="lazy">
+        <figcaption><span>01</span> 仰望・藍天為幕</figcaption>
+        <svg class="shot__leaf" viewBox="0 0 40 40" aria-hidden="true"><path d="M4 36C4 18 18 4 36 4c0 18-14 32-32 32z"/></svg>
+      </figure>
+      <figure class="shot reveal" data-delay="90">
+        <img src="1.png" alt="向日葵花盤特寫" loading="lazy">
+        <figcaption><span>02</span> 近觀・花盤細節</figcaption>
+        <svg class="shot__leaf" viewBox="0 0 40 40" aria-hidden="true"><path d="M4 36C4 18 18 4 36 4c0 18-14 32-32 32z"/></svg>
+      </figure>
+      <figure class="shot reveal" data-delay="180">
+        <img src="1.png" alt="遠眺整片向日葵花田" loading="lazy">
+        <figcaption><span>03</span> 遠眺・金黃延伸</figcaption>
+        <svg class="shot__leaf" viewBox="0 0 40 40" aria-hidden="true"><path d="M4 36C4 18 18 4 36 4c0 18-14 32-32 32z"/></svg>
+      </figure>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__row">
+        <span>向日葵</span><i>✦</i><span>sunflower</span><i>✦</i><span>桃園</span><i>✦</i><span>breeze</span><i>✦</i><span>向陽</span><i>✦</i><span>golden field</span><i>✦</i>
+        <span>向日葵</span><i>✦</i><span>sunflower</span><i>✦</i><span>桃園</span><i>✦</i><span>breeze</span><i>✦</i><span>向陽</span><i>✦</i><span>golden field</span><i>✦</i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 花語 ========== -->
+<section class="quote" id="quote">
+  <div class="quote__bg"><img src="1.png" alt="" aria-hidden="true" loading="lazy"></div>
+  <div class="quote__veil"></div>
+  <div class="quote__body reveal">
+    <span class="kicker kicker--light">LANGUAGE OF FLOWERS</span>
+    <blockquote>「向日葵的花語是——<br>沉默的愛，與永不低頭的熱情。」</blockquote>
+    <p>它把整顆頭都交給太陽，卻始終把根留在泥土裡。</p>
+    <div class="quote__stats">
+      <div><b>1,000+</b><span>朵同時綻放</span></div>
+      <div><b>120</b><span>天花期</span></div>
+      <div><b>23°N</b><span>桃園的日照傾角</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ========== 頁尾 ========== -->
+<footer class="footer" id="footer">
+  <svg class="footer__wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 60q120-40 240 0t240 0 240 0 240 0 240 0 240 0v60H0z" fill="#0f2e1c"/>
+  </svg>
+  <div class="wrap footer__inner">
+    <div class="footer__brand">
+      <h3>桃園・向日葵花田</h3>
+      <p>用一張照片與幾筆動畫，把大自然搬進瀏覽器。<br>本站為純靜態網頁，無任何追蹤程式。</p>
+    </div>
+    <ul class="footer__meta">
+      <li><span>技術</span>HTML · CSS · Vanilla JS</li>
+      <li><span>特色</span>響應式設計 · 減少動態偏好 · 無障礙標記</li>
+      <li><span>圖片</span>專案內建 1.png（Welcome to Taoyuan）</li>
+    </ul>
+  </div>
+  <p class="footer__copy">© <span id="year">2026</span> Sunflower Field · Made with 🌻</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
